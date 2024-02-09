@@ -1,0 +1,19 @@
+environment:
+  nodejs_version: "20"
+
+branches:
+  only:
+    - main # ветка git
+
+cache: node_modules  # кеширование
+
+install:
+  - npm install  # команда установки зависимостей
+
+build: webpack  # система сборки
+
+build_script:
+  - npm run build   # команда сборки
+
+test_script:
+  - npm test  # скрипт тестирования
